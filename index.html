@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dear, Piang~~ | A Little Garden of Unspoken Words</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- Falling Petals -->
+<div id="petal-container"></div>
+
+<!-- Petal Message -->
+<div id="petal-message" class="petal-message"></div>
+
+    <!-- Welcome Screen -->
+    <main class="welcome-screen">
+
+        <!-- Night Garden Toggle -->
+<button id="nightToggle" class="night-toggle" title="Toggle Night Garden">
+    🌙
+</button>
+
+        <!-- Decorative Flowers -->
+        <div class="flower flower-one">✿</div>
+        <div class="flower flower-two">❀</div>
+        <div class="flower flower-three">✿</div>
+        <div class="flower flower-four">❀</div>
+
+        <!-- Main Content -->
+        <div class="welcome-content">
+
+            <p class="small-heading">
+                A LITTLE SOMETHING FOR YOU
+            </p>
+
+            <div class="flower-icon">🌷</div>
+
+            <h1>
+                Dear, <span>Piang~~</span>
+            </h1>
+
+            <p class="subtitle">
+                A little garden of unspoken words.
+            </p>
+
+            <div class="divider">
+                <span>✦</span>
+            </div>
+
+            <p class="description">
+                Somewhere between a thought and a flower,
+                there's a little story waiting to bloom.
+            </p>
+
+            <div class="music-welcome">
+    <audio id="backgroundMusic" loop>
+        <source src="assets/music/glue-song.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="bloomButton" class="bloom-button">
+        🌷 Tap to Bloom
+    </button>
+
+    <p class="music-caption">
+        A little melody to accompany your visit ♡
+    </p>
+</div>
+
+            <a href="#garden" class="enter-button">
+                Enter the Garden
+                <span>→</span>
+            </a>
+
+            <p class="footer-note">
+                made with a little thought and a lot of heart
+            </p>
+
+        </div>
+
+        <!-- Bottom Decoration -->
+        <div class="bottom-decoration">
+            ❀ &nbsp; ✿ &nbsp; ❀
+        </div>
+
+    </main>
+
+
+   <!-- =================================
+     INTERACTIVE FLOWER GARDEN
+================================= -->
+
+<section id="garden" class="garden-section">
+
+    <div class="garden-heading">
+
+        <p class="small-heading">
+            WELCOME TO MY LITTLE GARDEN
+        </p>
+
+        <h2>A place where little things bloom.</h2>
+
+        <p class="garden-description">
+            Every flower holds a little thought.
+            Choose one and see what it has to say.
+        </p>
+
+    </div>
+
+
+    <!-- FLOWER CARDS -->
+
+    <div class="flower-container">
+
+
+        <!-- FLOWER 1 -->
+
+        <div class="flower-card">
+
+            <div class="card-flower">🌷</div>
+
+            <h3>A Little Appreciation</h3>
+
+            <p class="card-subtitle">
+                For the little things you do.
+            </p>
+
+            <button class="reveal-button">
+                Discover
+                <span>♡</span>
+            </button>
+
+            <p class="hidden-message">
+                Sometimes, people make ordinary days
+                a little brighter without even realizing it.
+                Perhaps that's one of the loveliest things
+                about them.
+            </p>
+
+        </div>
+
+
+        <!-- FLOWER 2 -->
+
+        <div class="flower-card">
+
+            <div class="card-flower">🌸</div>
+
+            <h3>Beautiful Little Things</h3>
+
+            <p class="card-subtitle">
+                A thought worth keeping.
+            </p>
+
+            <button class="reveal-button">
+                Discover
+                <span>♡</span>
+            </button>
+
+            <p class="hidden-message">
+                Not everything beautiful needs to be
+                extraordinary. Sometimes, a simple
+                conversation or a familiar smile
+                is already enough.
+            </p>
+
+        </div>
+
+
+        <!-- FLOWER 3 -->
+
+        <div class="flower-card">
+
+            <div class="card-flower">🌼</div>
+
+            <h3>A Gentle Reminder</h3>
+
+            <p class="card-subtitle">
+                A little note for today.
+            </p>
+
+            <button class="reveal-button">
+                Discover
+                <span>♡</span>
+            </button>
+
+            <p class="hidden-message">
+                May you always find reasons to smile,
+                little moments to treasure,
+                and beautiful things to look forward to.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <p class="garden-footer">
+        Take your time. Flowers bloom at their own pace.
+    </p>
+
+</section>
+
+
+    <!-- =================================
+     THE DIGITAL LETTER
+================================= -->
+
+<section id="letter" class="letter-section">
+
+    <div class="letter-heading">
+
+        <p class="small-heading">
+            SOMETHING I WANTED TO SHARE
+        </p>
+
+        <h2>A Little Letter, Just for You.</h2>
+
+        <p>
+            Some thoughts are better written than spoken.
+        </p>
+
+    </div>
+
+
+    <!-- ENVELOPE -->
+
+    <div class="letter-container">
+
+        <div class="envelope">
+
+            <div class="envelope-flower">🌷</div>
+
+            <p class="envelope-title">
+                A little letter for you
+            </p>
+
+            <p class="envelope-subtitle">
+                sealed with a little thought ♡
+            </p>
+
+            <button id="openLetter" class="letter-button">
+                Open your little letter
+                <span>♡</span>
+            </button>
+
+        </div>
+
+
+        <!-- LETTER CONTENT -->
+
+        <article id="letterContent" class="letter-paper">
+
+            <p class="letter-date">
+                A little note for today
+            </p>
+
+            <h3>Dear You,</h3>
+
+            <p class="letter-text">
+                Helllo...ping uhmmm Kamusta na ikaw?~~~~ I hope you're doing well and that everything has been treating you kindly lately. 
+                I just thought I'd check in and see how you're doing. It's been a while, and I figured it wouldn't hurt to
+                 ask how life has been going on your side. 
+            </p>
+
+            <p class="letter-text">
+                I hope things haven't been too overwhelming for you lately. And if they have, 
+                I hope you're finding little moments to breathe and take things at your own pace. 
+                Don't forget to give yourself some time to rest,
+                 especially when everything starts feeling a little too much.
+            </p>
+
+            <p class="letter-text">
+                Take care of yourself, okay? I hope you have more good days than difficult ones, 
+                more reasons to smile than to worry, and plenty of little things that make life feel lighter. 
+                Just wanted to check on you. :)
+            </p>
+
+            <p class="letter-text">
+               SOOO yeah HAHAHHAHAH in ani ko ka awkward mag type pero I just wanted to say that
+                I appreciate you and that I hope you're doing well. soo it took me some time to make this 
+                kay naa koy gi buhat na mga other things mana gud maong nadugay usually mga 3-4 days raman nako 
+                ni mahino ni gud kaso nalaangan kog hunahuna sa mga ideas and style na gusto nakoo gamiton
+                 maong dugay AHAHAHAHHAHAHAH see told yaaa!!!
+            </p>
+
+            <p class="letter-signature">
+                With a little thought,
+                <br>
+                Someone who appreciates you. 🌷
+            </p>
+
+        </article>
+
+
+
+
+    </div>
+
+</section>
+
+<!-- SECRET GARDEN -->
+<section id="secret-garden" class="secret-garden">
+
+    <div class="secret-heading">
+        <p class="small-heading">ONE LAST LITTLE SURPRISE</p>
+
+        <h2>A Door to Something Special.</h2>
+
+        <p>
+            Every garden has a secret.
+            Perhaps this one is waiting just for you.
+        </p>
+    </div>
+
+    <div class="secret-door-container">
+
+        <div class="secret-door">
+            <div class="door-decoration">✿</div>
+            <div class="door-handle"></div>
+        </div>
+
+        <button id="openSecretDoor" class="secret-door-button">
+            Open the little door ♡
+        </button>
+
+    </div>
+
+    <div id="secretReveal" class="secret-reveal">
+
+        <p class="secret-first-line">For all time.</p>
+
+        <h2>Always.</h2>
+
+        <div class="secret-divider">✧ ♡ ✧</div>
+
+        
+
+    </div>
+
+</section>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

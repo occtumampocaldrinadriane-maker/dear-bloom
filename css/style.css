@@ -1,0 +1,1464 @@
+/* =========================================
+   DEAR, BLOOM
+   A Little Garden of Unspoken Words
+========================================= */
+
+
+/* 1. GLOBAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #faf5ef;
+    color: #59463f;
+}
+
+
+/* 2. WELCOME SCREEN */
+
+.welcome-screen {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #fffdf9 0%,
+            #fdf5f0 55%,
+            #f6e9e2 100%
+        );
+}
+
+
+/* 3. MAIN CONTENT */
+
+.welcome-content {
+    max-width: 600px;
+    width: 100%;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+
+    animation: fadeIn 1.5s ease;
+}
+
+
+/* 4. SMALL HEADING */
+
+.small-heading {
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #bd8b87;
+
+    margin-bottom: 28px;
+}
+
+
+/* 5. FLOWER ICON */
+
+.flower-icon {
+    font-size: 48px;
+
+    margin-bottom: 18px;
+
+    animation: flowerFloat 4s ease-in-out infinite;
+}
+
+
+/* 6. MAIN TITLE */
+
+.welcome-content h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(52px, 10vw, 82px);
+    font-weight: 400;
+
+    color: #59463f;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 12px;
+}
+
+.welcome-content h1 span {
+    color: #c8898c;
+    font-style: italic;
+}
+
+
+/* 7. SUBTITLE */
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 19px;
+    font-style: italic;
+
+    color: #a77d77;
+
+    margin-bottom: 30px;
+}
+
+
+/* 8. DIVIDER */
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    width: 55px;
+    height: 1px;
+
+    background-color: #dfb7ad;
+}
+
+.divider span {
+    color: #c8898c;
+    font-size: 15px;
+}
+
+
+/* 9. DESCRIPTION */
+
+.description {
+    font-size: 14px;
+    line-height: 2;
+
+    color: #907a70;
+
+    max-width: 380px;
+
+    margin: 0 auto 35px;
+}
+
+
+/* 10. ENTER BUTTON */
+
+.enter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 16px 32px;
+
+    background-color: #c8898c;
+    color: #fffaf7;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    transition: all 0.35s ease;
+
+    box-shadow: 0 8px 20px rgba(200, 137, 140, 0.18);
+}
+
+.enter-button span {
+    transition: transform 0.3s ease;
+}
+
+.enter-button:hover {
+    background-color: #ae7479;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(200, 137, 140, 0.28);
+}
+
+.enter-button:hover span {
+    transform: translateX(5px);
+}
+
+
+/* 11. FOOTER NOTE */
+
+.footer-note {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #b39b91;
+
+    margin-top: 55px;
+}
+
+
+/* 12. DECORATIVE FLOWERS */
+
+.flower {
+    position: absolute;
+
+    color: #d9a4a2;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+
+    animation: flowerFloat 6s ease-in-out infinite;
+}
+
+.flower-one {
+    top: 12%;
+    left: 12%;
+
+    font-size: 55px;
+}
+
+.flower-two {
+    top: 20%;
+    right: 13%;
+
+    font-size: 40px;
+
+    animation-delay: 1s;
+}
+
+.flower-three {
+    bottom: 15%;
+    left: 15%;
+
+    font-size: 45px;
+
+    animation-delay: 2s;
+}
+
+.flower-four {
+    bottom: 12%;
+    right: 12%;
+
+    font-size: 60px;
+
+    animation-delay: 3s;
+}
+
+
+/* 13. BOTTOM DECORATION */
+
+.bottom-decoration {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #c8898c;
+
+    opacity: 0.5;
+
+    font-size: 18px;
+
+    letter-spacing: 8px;
+}
+
+
+/* 14. GARDEN SECTION */
+
+.garden-section {
+    min-height: 75vh;
+
+    padding: 100px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #f8ede8;
+}
+
+.garden-section h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(30px, 6vw, 45px);
+
+    font-weight: 400;
+
+    color: #75564f;
+
+    margin-bottom: 20px;
+}
+
+.garden-section > p:last-child {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #967d73;
+}
+
+
+/* 15. ANIMATIONS */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes flowerFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* 16. MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 600px) {
+
+    .welcome-screen {
+        padding: 35px 24px;
+    }
+
+    .small-heading {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .flower-icon {
+        font-size: 42px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .flower-one {
+        top: 8%;
+        left: 5%;
+
+        font-size: 35px;
+    }
+
+    .flower-two {
+        top: 12%;
+        right: 5%;
+
+        font-size: 30px;
+    }
+
+    .flower-three {
+        bottom: 12%;
+        left: 5%;
+
+        font-size: 35px;
+    }
+
+    .flower-four {
+        bottom: 10%;
+        right: 5%;
+
+        font-size: 40px;
+    }
+
+    .footer-note {
+        font-size: 9px;
+    }
+
+}
+/* =========================================
+   INTERACTIVE FLOWER GARDEN
+========================================= */
+
+
+/* GARDEN HEADING */
+
+.garden-heading {
+    max-width: 650px;
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+.garden-heading h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(30px, 6vw, 45px);
+
+    font-weight: 400;
+
+    color: #75564f;
+
+    margin-bottom: 20px;
+}
+
+.garden-description {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #967d73;
+}
+
+
+/* FLOWER CONTAINER */
+
+.flower-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1050px;
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+
+/* FLOWER CARDS */
+
+.flower-card {
+    background-color: #fffaf6;
+
+    border: 1px solid #f0ddd6;
+
+    border-radius: 18px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(120, 80, 65, 0.04);
+
+    transition: all 0.35s ease;
+}
+
+
+.flower-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(120, 80, 65, 0.09);
+
+    border-color: #dfb7ad;
+}
+
+
+/* FLOWER ICON */
+
+.card-flower {
+    font-size: 55px;
+
+    margin-bottom: 22px;
+
+    transition: transform 0.4s ease;
+}
+
+
+.flower-card:hover .card-flower {
+    transform: scale(1.15) rotate(8deg);
+}
+
+
+/* CARD TITLE */
+
+.flower-card h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 21px;
+
+    font-weight: 400;
+
+    color: #75564f;
+
+    margin-bottom: 12px;
+}
+
+
+/* CARD SUBTITLE */
+
+.card-subtitle {
+    font-size: 12px;
+
+    color: #a58b80;
+
+    margin-bottom: 25px;
+}
+
+
+/* DISCOVER BUTTON */
+
+.reveal-button {
+    border: 1px solid #d6a09d;
+
+    background: transparent;
+
+    color: #bd8585;
+
+    padding: 11px 25px;
+
+    border-radius: 30px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.reveal-button:hover {
+    background-color: #c8898c;
+
+    color: white;
+}
+
+
+.reveal-button span {
+    margin-left: 8px;
+}
+
+
+/* HIDDEN MESSAGE */
+
+.hidden-message {
+    display: none;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    line-height: 1.9;
+
+    color: #967d73;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #f0ddd6;
+}
+
+
+/* REVEALED MESSAGE */
+
+.flower-card.active .hidden-message {
+    display: block;
+
+    animation: fadeIn 0.6s ease;
+}
+
+
+/* GARDEN FOOTER */
+
+.garden-footer {
+    text-align: center;
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    font-size: 14px;
+
+    color: #b18a80;
+
+    margin-top: 65px;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 750px) {
+
+    .flower-container {
+        grid-template-columns: 1fr;
+
+        max-width: 420px;
+
+        gap: 20px;
+    }
+
+    .garden-section {
+        padding: 80px 20px;
+    }
+
+    .garden-heading {
+        margin-bottom: 45px;
+    }
+
+    .flower-card {
+        padding: 35px 25px;
+    }
+
+}
+
+/* =========================================
+   THE DIGITAL LETTER
+========================================= */
+
+.letter-section {
+
+    min-height: 100vh;
+
+    padding: 100px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #faf0eb,
+            #fffaf6
+        );
+
+}
+
+
+/* LETTER HEADING */
+
+.letter-heading {
+
+    margin-bottom: 60px;
+
+    max-width: 600px;
+
+}
+
+.letter-heading h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(30px, 6vw, 45px);
+
+    font-weight: 400;
+
+    color: #75564f;
+
+    margin-bottom: 18px;
+
+}
+
+.letter-heading > p:last-child {
+
+    font-size: 14px;
+
+    color: #967d73;
+
+}
+
+
+/* ENVELOPE CONTAINER */
+
+.letter-container {
+
+    width: 100%;
+
+    max-width: 550px;
+
+}
+
+
+/* ENVELOPE */
+
+.envelope {
+
+    padding: 55px 25px;
+
+    background: #fffaf6;
+
+    border: 1px solid #efd9d2;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px rgba(120, 80, 65, 0.07);
+
+}
+
+
+/* ENVELOPE FLOWER */
+
+.envelope-flower {
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ENVELOPE TITLE */
+
+.envelope-title {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    color: #75564f;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ENVELOPE SUBTITLE */
+
+.envelope-subtitle {
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    color: #b18a80;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* OPEN LETTER BUTTON */
+
+.letter-button {
+
+    padding: 15px 30px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: #c8898c;
+
+    color: white;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.letter-button:hover {
+
+    background: #ae7479;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(200, 137, 140, 0.2);
+
+}
+
+
+/* LETTER PAPER */
+
+.letter-paper {
+
+    display: none;
+
+    margin-top: 35px;
+
+    padding: 45px 40px;
+
+    background: #fffdf9;
+
+    border: 1px solid #f0ddd6;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    box-shadow:
+        0 15px 40px rgba(120, 80, 65, 0.06);
+
+}
+
+
+/* SHOW LETTER */
+
+.letter-paper.open {
+
+    display: block;
+
+    animation: fadeIn 1s ease;
+
+}
+
+
+/* LETTER DATE */
+
+.letter-date {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #bd8b87;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* LETTER TITLE */
+
+.letter-paper h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    color: #75564f;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* LETTER PARAGRAPHS */
+
+.letter-text {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: #806b62;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* LETTER SIGNATURE */
+
+.letter-signature {
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: #bd8585;
+
+    margin-top: 35px;
+
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 600px) {
+
+    .letter-section {
+
+        padding: 80px 20px;
+
+    }
+
+    .letter-heading {
+
+        margin-bottom: 40px;
+
+    }
+
+    .envelope {
+
+        padding: 45px 20px;
+
+    }
+
+    .letter-paper {
+
+        padding: 30px 23px;
+
+    }
+
+    .letter-text {
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* TAP TO BLOOM MUSIC BUTTON */
+
+.music-welcome {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.bloom-button {
+    background: #ce8e94;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(180, 110, 120, 0.15);
+}
+
+.bloom-button:hover {
+    background: #b8757d;
+    transform: translateY(-3px);
+}
+
+.music-caption {
+    color: #a88b80;
+    font-size: 12px;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* =================================
+   FALLING PETALS & NIGHT GARDEN
+================================= */
+
+/* Smooth background transitions */
+
+body {
+    transition: background 1s ease, color 1s ease;
+}
+
+/* Falling Petals Container */
+
+#petal-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Individual Petals */
+
+.petal {
+    position: absolute;
+    top: -30px;
+    font-size: 20px;
+    pointer-events: auto;
+    cursor: pointer;
+    animation: petalFall linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes petalFall {
+    0% {
+        transform: translateY(-30px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(40px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(-30px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Petal Message */
+
+.petal-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fffaf6;
+    color: #9e7075;
+    padding: 25px 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    max-width: 280px;
+    width: 80%;
+    z-index: 1001;
+    display: none;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.petal-message.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Night Garden Button */
+
+.night-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #fff1e9;
+    font-size: 23px;
+    cursor: pointer;
+    z-index: 1002;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+}
+
+.night-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* =================================
+   NIGHT GARDEN APPEARANCE
+================================= */
+
+body.night-mode {
+    background: #10182c;
+    color: #f5e9ed;
+}
+
+/* Welcome Screen */
+
+body.night-mode .welcome-screen {
+    background: linear-gradient(
+        135deg,
+        #10182c,
+        #202b48,
+        #302943
+    );
+}
+
+/* Garden Section */
+
+body.night-mode .garden-section,
+body.night-mode .letter-section {
+    background: linear-gradient(
+        135deg,
+        #17213a,
+        #252c49,
+        #302943
+    );
+}
+
+/* Headings and Text */
+
+body.night-mode h1,
+body.night-mode h2,
+body.night-mode h3,
+body.night-mode p {
+    color: #f3dce5;
+}
+
+/* Flower Cards */
+
+body.night-mode .flower-card {
+    background: #26314c;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Letter */
+
+body.night-mode .letter-paper,
+body.night-mode .envelope {
+    background: #30334e;
+    color: #f5e9ed;
+}
+
+/* Moon Button */
+
+body.night-mode .night-toggle {
+    background: #343d5d;
+    box-shadow: 0 0 20px rgba(190, 190, 255, 0.25);
+}
+
+/* Glowing Decorations */
+
+body.night-mode .flower {
+    filter: drop-shadow(0 0 8px rgba(255, 200, 230, 0.6));
+}
+
+/* =================================
+   BLOOMING MOMENTS - FLOWER RAIN
+================================= */
+
+.flower-rain {
+    position: fixed;
+    top: -50px;
+    z-index: 2000;
+    pointer-events: none;
+    font-size: 25px;
+    animation: flowerRain linear forwards;
+}
+
+@keyframes flowerRain {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(45px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(-35px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =================================
+   SECRET GARDEN - DOOR DESIGN
+================================= */
+
+.secret-garden {
+    min-height: 100vh;
+    padding: 100px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #1c2340,
+        #302743,
+        #453047
+    );
+    color: #fff0f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.secret-heading {
+    margin-bottom: 55px;
+}
+
+.secret-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 20px 0;
+    color: #f4c6d0;
+}
+
+.secret-heading p {
+    line-height: 1.8;
+}
+
+.secret-door-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* The wooden door */
+
+.secret-door {
+    width: 190px;
+    height: 290px;
+    background: linear-gradient(
+        135deg,
+        #87543e,
+        #57352e,
+        #38231f
+    );
+    border: 7px solid #c99b68;
+    border-radius: 95px 95px 5px 5px;
+    position: relative;
+    box-shadow: 0 0 35px rgba(255, 190, 210, 0.2);
+    transition: transform 0.8s ease;
+}
+
+/* Decorative door panels */
+
+.secret-door::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    border: 2px solid #d8ad82;
+    border-radius: 85px 85px 3px 3px;
+}
+
+.secret-door::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: 110px;
+    height: 90px;
+    transform: translateX(-50%);
+    border: 2px solid #d8ad82;
+}
+
+/* Flower decoration */
+
+.door-decoration {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    z-index: 2;
+}
+
+/* Golden handle */
+
+.door-handle {
+    position: absolute;
+    right: 20px;
+    top: 58%;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #f5ce78;
+    box-shadow: 0 0 12px #f5ce78;
+    z-index: 3;
+}
+
+/* Open button */
+
+.secret-door-button {
+    padding: 16px 35px;
+    border: 1px solid #e8aab9;
+    border-radius: 40px;
+    background: #cf8998;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.secret-door-button:hover {
+    background: #e2a1af;
+    transform: translateY(-4px);
+}
+
+/* Final message - hidden initially */
+
+.secret-reveal {
+    display: none;
+    margin-top: 65px;
+    animation: fadeIn 2s ease;
+}
+
+.secret-reveal.show {
+    display: block;
+}
+
+.secret-first-line {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: #f5d6df;
+}
+
+.secret-reveal h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    color: #e9a6b5;
+    margin: 15px 0;
+}
+
+.secret-divider {
+    font-size: 25px;
+    color: #f5d6df;
+    margin: 25px 0;
+}
+
+.secret-ending {
+    font-style: italic;
+    line-height: 1.8;
+    color: #e6cbd4;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Mobile appearance */
+
+@media (max-width: 600px) {
+    .secret-heading h2 {
+        font-size: 29px;
+    }
+
+    .secret-door {
+        width: 160px;
+        height: 250px;
+    }
+
+    .secret-reveal h2 {
+        font-size: 48px;
+    }
+}
+
+/* =================================
+   SECRET GARDEN - LIGHT MODE
+================================= */
+
+.secret-garden {
+    background: linear-gradient(
+        135deg,
+        #faf0eb,
+        #fffaf6,
+        #f6e9e2
+    );
+
+    color: #75564f;
+}
+
+.secret-heading h2 {
+    color: #75564f;
+}
+
+.secret-heading p {
+    color: #967d73;
+}
+
+.secret-first-line {
+    color: #a77d77;
+}
+
+.secret-reveal h2 {
+    color: #c8898c;
+}
+
+.secret-divider {
+    color: #c8898c;
+}
+
+.secret-ending {
+    color: #967d73;
+}
+
+
+/* =================================
+   SECRET GARDEN - NIGHT MODE
+================================= */
+
+body.night-mode .secret-garden {
+    background: linear-gradient(
+        135deg,
+        #1c2340,
+        #302743,
+        #453047
+    );
+
+    color: #fff0f5;
+}
+
+body.night-mode .secret-heading h2 {
+    color: #f4c6d0;
+}
+
+body.night-mode .secret-heading p {
+    color: #f3dce5;
+}
+
+body.night-mode .secret-first-line {
+    color: #f5d6df;
+}
+
+body.night-mode .secret-reveal h2 {
+    color: #e9a6b5;
+}
+
+body.night-mode .secret-divider {
+    color: #f5d6df;
+}
+
+body.night-mode .secret-ending {
+    color: #e6cbd4;
+}
